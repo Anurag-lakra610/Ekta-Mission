@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ektamission | Food Distribution & Hunger Relief, India</title>
+<meta name="description" content="Ektamission partners with communities to provide free, nutritious food to patients' families across 60+ hospitals and feeds over 5000+ people.">
+<meta name="keywords" content="ngo india, food distribution, free food hospitals, zero hunger, nonprofit india, ektamission">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink: #111513; 
+  --paper: #FBF7F1;
+  --paper-dim: #F1ECE1;
+  --indigo: #1B3A4B;
+  --indigo-deep: #102530;
+  --marigold: #E8A33D;
+  --clay: #C4592F;
+  --sage: #7C9885;
+  --line: rgba(31,36,33,0.15); 
+  --header-bg: rgba(16,37,48,0.92);
+  --text-muted: #2A302D; 
+  --max: 1180px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500; 
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-size: 16px; 
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700; 
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+a { color: inherit; }
+
+img, svg { display: block; max-width: 100%; }
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ---------- header ---------- */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--header-bg);
+  backdrop-filter: blur(8px);
+}
+
+.header-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 15px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  font-family: 'Fraunces', serif;
+  font-size: 1.6rem;
+  color: var(--paper);
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 65px; 
+  width: auto;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 26px;
+  align-items: center;
+}
+
+nav a {
+  color: var(--paper);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600; 
+  opacity: 0.9;
+  transition: opacity .25s, color 0.25s;
+}
+
+nav a:hover { opacity: 1; color: var(--marigold); }
+
+.nav-donate {
+  background: var(--marigold);
+  color: var(--indigo-deep) !important;
+  padding: 10px 22px;
+  border-radius: 3px;
+  font-weight: 700; 
+  opacity: 1 !important;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.nav-donate:hover { background: #f0b258; }
+
+/* ---------- hero ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: var(--indigo-deep);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 100px;
+}
+
+.hero-art {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 32px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-text {
+  grid-column: 2; 
+  color: var(--paper);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6); 
+}
+
+.hero-text .eyebrow {
+  color: var(--marigold);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  display: block;
+}
+
+.hero-text h1 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  margin-bottom: 26px;
+  max-width: 14ch;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  max-width: 46ch;
+  color: #FFF; 
+  margin-bottom: 34px;
+}
+
+.btn-row { display: flex; gap: 16px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 700; 
+  font-size: 1.05rem;
+  transition: transform .25s, background .25s;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-shadow: none;
+}
+
+.btn-primary { background: var(--marigold); color: var(--indigo-deep); }
+.btn-primary:hover { transform: translateY(-3px); background: #f0b258; }
+
+.btn-outline { border-color: rgba(251,247,241,0.6); color: var(--paper); backdrop-filter: blur(4px); background: rgba(0,0,0,0.3); }
+.btn-outline:hover { border-color: var(--paper); transform: translateY(-3px); background: rgba(0,0,0,0.5); }
+
+/* ---------- stat strip ---------- */
+.stat-strip {
+  position: relative;
+  z-index: 2;
+  background: var(--indigo);
+  border-top: 1px solid rgba(251,247,241,0.12);
+}
+
+.stat-strip .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 36px 32px;
+  gap: 24px;
+}
+
+.stat { color: var(--paper); }
+.stat .num {
+  font-family: 'Fraunces', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--marigold);
+  display: block;
+}
+.stat .label { font-size: 1.05rem; font-weight: 600; color: #FFF; }
+
+/* ---------- section basics ---------- */
+section { padding: 110px 0; }
+
+.eyebrow-label {
+  font-size: 1.05rem;
+  color: var(--clay);
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.section-title {
+  font-size: 2.6rem;
+  max-width: 16ch;
+}
+
+/* ---------- vision / mission ---------- */
+.vm {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 60px;
+}
+
+.vm-col h3 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  color: var(--indigo);
+}
+
+.vm-col p { max-width: 42ch; color: var(--text-muted); font-size: 1.05rem; font-weight: 500; }
+
+.vm-divider { background: var(--line); }
+
+/* ---------- programmes ---------- */
+.programme-row {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 60px;
+  align-items: center;
+  padding: 60px 0;
+  border-top: 1px solid var(--line);
+}
+
+.programme-row:last-child { border-bottom: 1px solid var(--line); }
+
+.programme-row.reverse { grid-template-columns: 1.15fr 0.85fr; }
+.programme-row.reverse .prog-art { order: 2; }
+
+.prog-art {
+  aspect-ratio: 4/3.2;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--indigo);
+  position: relative;
+}
+
+.prog-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prog-num {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--clay);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.programme-row h3 { font-size: 2rem; margin-bottom: 16px; color: var(--ink); }
+.programme-row p { color: var(--text-muted); max-width: 48ch; margin-bottom: 18px; font-size: 1.05rem; }
+
+/* ---------- slider ---------- */
+.stories { background: var(--paper-dim); }
+
+.slider {
+  position: relative;
+  height: 560px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--indigo-deep);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+  display: flex;
+  align-items: flex-end;
+}
+
+.slide.active { opacity: 1; }
+
+.slide-art {
+  position: absolute;
+  inset: 0;
+}
+
+.slide-caption {
+  position: relative;
+  z-index: 2;
+  padding: 50px;
+  color: var(--paper);
+  max-width: 640px;
+}
+
+.slide-caption span {
+  color: var(--marigold);
+  font-size: 1.05rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.slide-caption h3 { font-size: 2rem; margin-bottom: 12px; }
+.slide-caption p { color: #FFF; font-size: 1.05rem; font-weight: 500; }
+
+.slider-dots {
+  position: absolute;
+  bottom: 24px;
+  right: 40px;
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: rgba(251,247,241,0.35);
+  border: none; cursor: pointer;
+  transition: background .3s;
+}
+
+.dot.active { background: var(--marigold); }
+
+/* ---------- get involved ---------- */
+.involve-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.involve-card {
+  background: var(--paper);
+  padding: 44px 38px;
+}
+
+.involve-card h3 { font-size: 1.5rem; margin-bottom: 14px; color: var(--indigo); }
+.involve-card p { color: var(--text-muted); margin-bottom: 22px; font-size: 1.05rem; }
+
+/* ---------- contact ---------- */
+.contact {
+  background: var(--indigo-deep);
+  color: var(--paper);
+}
+
+.contact .section-title { color: var(--paper); }
+.contact .eyebrow-label { color: var(--marigold); }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+}
+
+.contact-info p { color: #E0E8EA; max-width: 38ch; margin-bottom: 26px; font-size: 1.05rem; }
+.contact-info .addr { color: var(--paper); margin-bottom: 10px; font-weight: 600; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+input, textarea {
+  padding: 15px 16px;
+  border: 1px solid rgba(251,247,241,0.35);
+  background: rgba(251,247,241,0.08);
+  border-radius: 3px;
+  color: var(--paper);
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+input::placeholder, textarea::placeholder { color: #B0C0C5; }
+
+textarea { height: 130px; resize: vertical; }
+
+button[type="submit"] {
+  padding: 16px;
+  background: var(--marigold);
+  border: none;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--indigo-deep);
+  transition: background .25s;
+}
+
+button[type="submit"]:hover { background: #f0b258; }
+
+/* ---------- footer ---------- */
+footer {
+  background: #000;
+  color: #D3CEC2;
+  padding: 70px 0 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(4, 1fr);
+  gap: 30px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(251,247,241,0.15);
+}
+
+.footer-logo {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem;
+  color: var(--paper);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo img {
+  height: 50px;
+  width: auto;
+}
+
+.footer-grid h4 {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--paper);
+  margin-bottom: 16px;
+}
+
+.footer-grid ul { list-style: none; }
+.footer-grid li { margin-bottom: 10px; }
+
+.footer-grid a {
+  color: #D3CEC2;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.footer-grid a:hover { color: var(--marigold); }
+
+.footer-bottom {
+  padding-top: 26px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: #A39D90;
+}
+
+.social-row { display: flex; gap: 16px; }
+
+
+/* ---------- FLOATING SOCIAL BUTTONS CSS ---------- */
+.floating-socials {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1500;
+}
+
+.float-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.float-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.float-btn svg { width: 30px; height: 30px; fill: white; }
+
+.whatsapp-btn { background-color: #25D366; }
+.instagram-btn { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); }
+
+
+/* ---------- NEW DONATION MODAL CSS ---------- */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 2000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow-y: auto; 
+  background-color: rgba(16, 37, 48, 0.85); 
+  backdrop-filter: blur(5px);
+  padding: 20px 0;
+}
+
+.modal-content {
+  background-color: var(--paper);
+  margin: 0 auto;
+  padding: 40px 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 550px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.modal-content h3 {
+  color: var(--indigo-deep);
+  font-size: 2rem;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.modal-content > p {
+  color: var(--text-muted);
+  margin-bottom: 25px;
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: var(--clay);
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.close-btn:hover { color: var(--ink); }
+
+/* Donation Options Grid inside Modal */
+.donate-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.donate-card {
+  background: var(--paper-dim);
+  border: 1px solid var(--line);
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.donate-card h4 {
+  font-size: 1.3rem;
+  color: var(--ink);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.donate-qr-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.donate-qr-wrapper img {
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #FFF;
+  padding: 10px;
+}
+
+.copy-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--paper);
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-size: 1rem;
+  border: 1px dashed var(--clay);
+  gap: 10px;
+}
+
+.copy-box strong {
+  word-break: break-all;
+  color: var(--ink);
+}
+
+.copy-btn {
+  background: var(--indigo-deep);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #FFF;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.copy-btn:hover { background: var(--marigold); color: var(--indigo-deep); }
+
+.bank-details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bank-details-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 1rem;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.bank-details-list li:last-child { border-bottom: none; padding-bottom: 0; }
+.bank-details-list span { color: var(--text-muted); }
+.bank-details-list strong { color: var(--ink); }
+
+.val-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* ---------- responsive ---------- */
+@media(max-width:900px) {
+  .header-inner { flex-wrap: wrap; }
+  nav ul { display: none; }
+  
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-text {
+    grid-column: 1; 
+    text-align: center;
+  }
+  .hero-text h1 { margin-left: auto; margin-right: auto; }
+  .hero-text p { margin-left: auto; margin-right: auto; }
+  .btn-row { justify-content: center; }
+  
+  .vm { grid-template-columns: 1fr; }
+  .vm-divider { display: none; }
+  .programme-row, .programme-row.reverse { grid-template-columns: 1fr; }
+  .programme-row.reverse .prog-art { order: 0; }
+  .involve-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+}
+
+@media(max-width:640px) {
+  .wrap { padding: 0 22px; }
+  .hero-text h1 { font-size: 2.8rem; }
+  .section-title { font-size: 2.2rem; }
+  .stat-strip .wrap { flex-direction: column; gap: 20px; padding: 30px 22px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  
+  .floating-socials {
+    bottom: 20px;
+    right: 20px;
+    gap: 12px;
+  }
+  .float-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .float-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+  .modal-content {
+    padding: 30px 20px;
+  }
+  .bank-details-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-left">
+      <a href="#home" class="logo">
+        <img src="./logo.jpg" alt="Ektamission Logo">
+        Ektamission
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#work">Our Work</a></li>
+          <li><a href="#stories">Impact</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <div class="header-right">
+      
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-art">
+    <img src="./WhatsApp Image 2026-09-04 at 6.54.11 PM.jpeg" style="width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0.35;">
+  </div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="eyebrow">Zero Hunger Initiative</span>
+      <h1>No one should have to sleep hungry.</h1>
+      <p>We believe food is a basic human right. Ektamission works tirelessly to provide hot, nutritious meals to patients' families in hospitals and underprivileged communities across the region.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary open-donate-modal">Donate to Feed</a>
+        <a href="#work" class="btn btn-outline">See Our Work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<div class="stat-strip">
+  <div class="wrap">
+    <div class="stat"><span class="num">60+</span><span class="label">Hospitals Covered</span></div>
+    <div class="stat"><span class="num">5,000+</span><span class="label">People Fed Regularly</span></div>
+    <div class="stat"><span class="num">15+</span><span class="label">Years of Uninterrupted Langar Sewa</span></div>
+  </div>
+</div>
+
+<!-- ============ VISION / MISSION ============ -->
+<section>
+  <div class="wrap vm">
+    <div class="vm-col">
+      <span class="eyebrow-label">Our Vision</span>
+      <h3>A society completely free from hunger.</h3>
+      <p>We imagine a world where financial struggle never means an empty stomach, especially for families caring for their sick loved ones in hospitals.</p>
+    </div>
+    <div class="vm-divider"></div>
+    <div class="vm-col">
+      <span class="eyebrow-label">Our Mission</span>
+      <h3>Bringing fresh meals to the last mile.</h3>
+      <p>We cook and deliver thousands of fresh, hygienic meals daily, ensuring that those going through tough medical times don't have to worry about their next meal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROGRAMMES ============ -->
+<section id="work" style="padding-top:0;">
+  <div class="wrap">
+    <span class="eyebrow-label">What We Do</span>
+    <h2 class="section-title">How we are fighting hunger every day.</h2>
+
+    <div class="programme-row">
+      <div class="prog-art">
+        <img src="./WhatsApp Image 2026-09-08 at 7.54.50 PM.jpeg" alt="Providing food at hospital">
+      </div>
+      <div>
+        <span class="prog-num">01</span>
+        <h3>Hospital Langar Service</h3>
+        <p>Family members of patients often stay outside hospitals for days without proper food. We bridge this gap by distributing fresh, hot meals across 60+ hospitals directly to those in need.</p>
+      </div>
+    </div>
+
+    <div class="programme-row reverse">
+      <div class="prog-art">
+        <img src="./17d24a26-d364-4977-9f22-b0eb7598afed.jpg" alt="Community food drive">
+      </div>
+      <div>
+        <span class="prog-num">02</span>
+        <h3>Community Food Drives</h3>
+        <p>Beyond hospitals, our volunteers reach out to the streets and underprivileged areas, ensuring that the most vulnerable people get a dignified and healthy meal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SLIDER ============ -->
+<section class="stories" id="stories">
+  <div class="wrap">
+    <span class="eyebrow-label">Stories of Impact</span>
+    <h2 class="section-title" style="margin-bottom:44px;">Real food. Real change.</h2>
+
+    <div class="slider">
+      
+      <!-- Slide 1: Relief at Hospitals -->
+      <div class="slide active">
+        <div class="slide-art">
+          <img src="./WhatsApp Image 2026-09-08 at 7.54.50 PM.jpeg" alt="Relief at Hospitals" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.4;">
+        </div>
+        <div class="slide-caption">
+          <span>Relief at Hospitals</span>
+          <h3>"I didn't have to worry about food today."</h3>
+          <p>A father tending to his son in the ICU shared that our daily meals saved him from spending his limited medical funds on expensive outside food.</p>
+        </div>
+      </div>
+      
+      <!-- Slide 2: Community Outreach -->
+      <div class="slide">
+        <div class="slide-art">
+          <img src="./WhatsApp Image 2026-09-08 at 7.54.50 PM (1).jpeg" alt="Community Outreach" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.4;">
+        </div>
+        <div class="slide-caption">
+          <span>Community Outreach</span>
+          <h3>5,000+ plates served daily</h3>
+          <p>Rain or shine, our dedicated volunteers ensure that the food reaches the right people with 100% commitment and hygiene.</p>
+        </div>
+      </div>
+
+      <div class="slider-dots" role="tablist" aria-label="Story slides">
+        <button class="dot active" data-index="0" aria-label="Show story 1"></button>
+        <button class="dot" data-index="1" aria-label="Show story 2"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GET INVOLVED ============ -->
+<section id="involved">
+  <div class="wrap">
+    <span class="eyebrow-label">Get Involved</span>
+    <h2 class="section-title" style="margin-bottom:44px;">Join the mission against hunger.</h2>
+
+    <div class="involve-grid">
+      <div class="involve-card">
+        <h3>Donate a Meal</h3>
+        <p>Your small contribution can provide a full, nutritious meal to someone struggling outside a hospital ward.</p>
+        <a class="text-link open-donate-modal" style="cursor:pointer; color: var(--marigold); font-weight: 700;">Donate via QR / Bank</a>
+      </div>
+      <div class="involve-card">
+        <h3>Volunteer</h3>
+        <p>Come join our food distribution drives. Experience the joy of serving the community firsthand.</p>
+        <a href="#contact" class="text-link" style="color: var(--marigold); font-weight: 700;">Join Us</a>
+      </div>
+      <div class="involve-card">
+        <h3>Sponsor a Day</h3>
+        <p>Celebrate your special occasions by sponsoring the langar for an entire day at a hospital.</p>
+        <a href="#contact" class="text-link" style="color: var(--marigold); font-weight: 700;">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="eyebrow-label">Contact Us</span>
+        <h2 class="section-title">Let's talk about how you can help.</h2>
+        <p>Whether you want to volunteer, sponsor meals, or partner with us, we'd love to hear from you.</p>
+        <p class="addr">Ektamission<br>Ludhiana, Moga, Jagraon, Punjab, India</p>
+        <p class="addr">Phone: +91 9257060001<br>Email: Gilljaswinder077@gmail.com</p>
+      </div>
+      <form>
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <input type="tel" placeholder="Phone Number">
+        <textarea placeholder="How would you like to get involved?"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="./logo.jpg" alt="Ektamission Logo">
+          Ektamission
+        </div>
+        <p style="font-size:1rem;max-width:32ch;">Providing nutritious meals to 5000+ people daily across 60+ hospitals with 100% commitment.</p>
+      </div>
+      <div>
+        <h4>Our Work</h4>
+        <ul>
+          <li><a href="#work">Hospital Langar</a></li>
+          <li><a href="#work">Food Drives</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get Involved</h4>
+        <ul>
+          <li><a class="open-donate-modal" style="cursor:pointer;">Donate</a></li>
+          <li><a href="#involved">Volunteer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ektamission. All Rights Reserved.</span>
+      <div class="social-row">
+        <a href="https://instagram.com/ektamission" target="_blank">Instagram</a>
+        <a href="https://wa.me/919257060001" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING SOCIAL BUTTONS ============ -->
+<div class="floating-socials">
+  <a href="https://wa.me/919257060001" target="_blank" class="float-btn whatsapp-btn" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a5.8 5.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+    </svg>
+  </a>
+  <a href="https://www.instagram.com/ektamission_/" target="_blank" class="float-btn instagram-btn" aria-label="Visit Instagram">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+    </svg>
+  </a>
+</div>
+
+<!-- ============ EXTENDED DONATION MODAL ============ -->
+<div id="donationModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h3>Support Our Cause</h3>
+    <p>Choose a convenient way to donate. Every rupee counts!</p>
+    
+    <div class="donate-options">
+      
+      <!-- Option 1: QR & UPI -->
+      <div class="donate-card">
+        <h4>📱 Scan to Donate</h4>
+        <div class="donate-qr-wrapper">
+          <img src="./qr.jpeg" alt="Ekta Welfare Trust QR Code">
+        </div>
+        <div class="copy-box">
+          <span style="color:var(--text-muted); font-size:0.9rem;">UPI ID:</span>
+          <strong id="upi-id">ektawelfaretrust5531@sbi</strong>
+          <button class="copy-btn" onclick="copyText('upi-id')">Copy</button>
+        </div>
+      </div>
+
+      <!-- Option 2: Bank Details -->
+      <div class="donate-card">
+        <h4>🏦 Bank Details</h4>
+        <ul class="bank-details-list">
+          <li>
+            <span>Account Name</span>
+            <strong>EKTA WELFARE TRUST</strong>
+          </li>
+          <li>
+            <span>Account Number</span>
+            <div class="val-group">
+              <strong id="acc-no">43279495531</strong>
+              <button class="copy-btn" onclick="copyText('acc-no')">Copy</button>
+            </div>
+          </li>
+          <li>
+            <span>IFSC Code</span>
+            <div class="val-group">
+              <strong id="ifsc">SBIN0000655</strong>
+              <button class="copy-btn" onclick="copyText('ifsc')">Copy</button>
+            </div>
+          </li>
+          <li>
+            <span>Bank Name</span>
+            <strong>State Bank of India</strong>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Option 3: International Payments -->
+      <div class="donate-card">
+        <h4>🌍 International Payments</h4>
+        <p style="color:var(--text-muted); margin-bottom: 12px; font-size:0.95rem;">For NRI supporters and international wire transfers, please use the SWIFT code below.</p>
+        <div class="copy-box">
+          <span style="color:var(--text-muted); font-size:0.9rem;">SWIFT Code:</span>
+          <strong id="swift-code">SBININBB276</strong>
+          <button class="copy-btn" onclick="copyText('swift-code')">Copy</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+// Logic to handle copying text to clipboard
+function copyText(elementId) {
+  var textToCopy = document.getElementById(elementId).innerText;
+  navigator.clipboard.writeText(textToCopy).then(() => {
+    alert("Copied: " + textToCopy);
+  }).catch(err => {
+    console.error('Failed to copy text: ', err);
+  });
+}
+
+(function(){
+  // Slider Logic
+  var slides = document.querySelectorAll('.slide');
+  var dots = document.querySelectorAll('.slider-dots .dot');
+  var current = 0;
+  var timer;
+
+  function show(index){
+    if(slides.length === 0) return;
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = index;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next(){
+    if(slides.length === 0) return;
+    show((current + 1) % slides.length);
+  }
+
+  function start(){
+    timer = setInterval(next, 4500);
+  }
+
+  function stop(){
+    clearInterval(timer);
+  }
+
+  dots.forEach(function(dot){
+    dot.addEventListener('click', function(){
+      stop();
+      show(parseInt(dot.getAttribute('data-index'), 10));
+      start();
+    });
+  });
+
+  var sliderEl = document.querySelector('.slider');
+  if(sliderEl){
+    sliderEl.addEventListener('mouseenter', stop);
+    sliderEl.addEventListener('mouseleave', start);
+    start();
+  }
+
+  // Donation Modal Logic
+  var modal = document.getElementById("donationModal");
+  var donateBtns = document.querySelectorAll(".open-donate-modal");
+  var closeBtn = document.querySelector(".close-btn");
+
+  donateBtns.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.style.display = "block";
+    });
+  });
+
+  closeBtn.addEventListener('click', function() {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+
+})();
+</script>
+
+</body>
+</html>
